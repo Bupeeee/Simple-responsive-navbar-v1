@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  background-color: lightgrey;
+}
+
+nav {
+  height: 70px;
+  background-color: white;
+  padding: 0em 1em;
+}
+
+.nav_logo {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 70px;
+  float: left;
+}
+
+.nav_links {
+  float: right;
+}
+.nav_links ul {
+  display: flex;
+  position: relative;
+}
+.nav_links ul li {
+  padding: 0em 1em;
+}
+.nav_links ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 70px;
+  font-size: 14px;
+}
+.nav_links ul .link_submenu {
+  position: absolute;
+  display: block;
+  background-color: white;
+}
+.nav_links ul .link_submenu li {
+  padding: 1em;
+}
+
+.nav_links.active {
+  transform: translateY(0vh);
+}
+
+.nav_toggle {
+  position: absolute;
+  right: 1em;
+  float: right;
+  width: 35px;
+  position: relative;
+  margin-top: 12px;
+}
+
+.nav_toggle span {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  background-color: black;
+}
+
+span:nth-child(1) {
+  margin-left: 0.6em;
+  width: 70%;
+  top: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+span:nth-child(2) {
+  width: 100%;
+  top: 22px;
+  transition: all 300ms ease-in-out;
+}
+
+span:nth-child(3) {
+  width: 100%;
+  top: 34px;
+  transition: all 200ms ease-in-out;
+}
+
+/* active */
+.nav_toggle.active span:nth-child(1) {
+  width: 50%;
+  transform: translateY(15px) translateX(0px) rotate(-45deg);
+}
+.nav_toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav_toggle.active span:nth-child(3) {
+  width: 50%;
+  margin-left: 0px;
+  transform: translateY(-9px) translateX(10px) rotate(45deg);
+}
+
+@media (max-width: 425px) {
+  nav {
+    padding: 0em 1.5em;
+  }
+  nav .nav_links {
+    z-index: -1;
+    transform: translateY(-70vh);
+    transition: all 500ms ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    background-color: white;
+  }
+  nav .nav_links ul {
+    display: block;
+  }
+  nav .nav_links ul li {
+    text-align: center;
+  }
+}
+@media (min-width: 425px) {
+  .nav_toggle {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

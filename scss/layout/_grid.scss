@@ -1,0 +1,28 @@
+@include mobile {
+    nav {
+        padding: 0em 1.5em;
+        .nav_links {
+            z-index: -1;
+            transform: translateY(-70vh);
+            transition: all 500ms ease-in-out;
+            position: absolute;
+            width: 100%;
+            top: 70px;
+            left: 0;
+            background-color: white;
+            ul {
+                display: block;
+
+                li {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .nav_toggle {
+        display: none;
+    }
+}
